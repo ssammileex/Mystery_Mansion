@@ -5,12 +5,13 @@ An example that offers ideas on how to get started with a JavaScript-based HTML5
 
 Title: The Mysterious Mansion<br>
 Opening: Characters:<br>
-James
-Fynn
-Parker
-Georgia
-Ghost
-grounds keeper
+Four Best Friends: <br>
+James<br>
+Fynn<br>
+Parker<br>
+Georgia<br>
+Ghost<br>
+grounds keeper<br>
 Background:
 	Venturing through the woods is a weekly occurrence for you and your friends. You all have been best friends since you can remember. All four of you knew the the wood like the back of your hand. 
 	It is a cool, Autumn day, something out of the ordinary catches your attention. You squint your eyes really hard and can just make out the outline of a house. 

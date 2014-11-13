@@ -1,3 +1,58 @@
+var player = {
+	items: [];
+	pickUp: function(item){
+		this.function.push(item)
+	},
+	drop: function(item){
+		var pos = this.item.indexOf(item);
+		if (pos >= 0) {
+			this.items.splice(pos, 1);
+		}
+	}
+}
+var interpret = function(string){
+        var action= [];
+        var object = [];
+        var tr = string.trim();
+        var sp = t.spilt(" ");
+        var shift = sp.shift();
+        action.first = shift;
+	var res = sp.join();
+	object.result = res;
+	return object;
+}
+function execute (command) {
+	var action = command.action;
+	var object = command.object;
+	var func = player[action];
+	func(target);
+}
+function report (result) {
+	for(var i = 0; i<object.length; i++){
+}
+function gameStep () {
+	var input = this.value;
+	var cmd = interpret(input);
+	//then call execute, then report 
+}
+
+var gameStart = function () {
+	var inputBox = document.querySelector("input");
+	inputBox.addEventListener("keyup", gameStep);
+window.onload = gameStart;
+
+var interpret = function(string){
+	var action= [];
+	var object = [];
+	var tr = string.trim();
+	var sp = t.spilt(" ");
+	var shift = sp.shift();
+	action.
+
+
+
+
+/*
 var runSomeTests = function(){
 	var descrip = document.getElementById('descrip');
 
@@ -39,3 +94,4 @@ var runSomeTests = function(){
 	
 };
 window.onload = runSomeTests;
+*/

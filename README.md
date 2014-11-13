@@ -2,8 +2,9 @@ TextAdventure-Base
 ==================
 
 An example that offers ideas on how to get started with a JavaScript-based HTML5 text adventure game.
-Title: The Mysterious Mansion
-Opening: Characters:
+
+Title: The Mysterious Mansion<br>
+Opening: Characters:<br>
 James
 Fynn
 Parker

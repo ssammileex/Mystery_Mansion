@@ -1,97 +1,76 @@
-var player = {
-	items: [];
-	pickUp: function(item){
-		this.function.push(item)
-	},
-	drop: function(item){
-		var pos = this.item.indexOf(item);
-		if (pos >= 0) {
-			this.items.splice(pos, 1);
-		}
-	}
-}
-var interpret = function(string){
-        var action= [];
-        var object = [];
-        var tr = string.trim();
-        var sp = t.spilt(" ");
-        var shift = sp.shift();
-        action.first = shift;
-	var res = sp.join();
-	object.result = res;
-	return object;
-}
-function execute (command) {
-	var action = command.action;
-	var object = command.object;
-	var func = player[action];
-	func(target);
-}
-function report (result) {
-	for(var i = 0; i<object.length; i++){
-}
-function gameStep () {
-	var input = this.value;
-	var cmd = interpret(input);
-	//then call execute, then report 
-}
-
-var gameStart = function () {
-	var inputBox = document.querySelector("input");
-	inputBox.addEventListener("keyup", gameStep);
-window.onload = gameStart;
-
-var interpret = function(string){
-	var action= [];
-	var object = [];
-	var tr = string.trim();
-	var sp = t.spilt(" ");
-	var shift = sp.shift();
-	action.
-
-
-
-
-/*
-var runSomeTests = function(){
-	var descrip = document.getElementById('descrip');
-
-	console.log( descrip.tagName );
-	console.log( descrip.innerHTML );
-	console.log( descrip.parentNode.tagName );
-
-	var headings = document.querySelectorAll('aside > h1');
-
-	for (i = 0; i < headings.length; i++){
-	   console.log( headings[i].innerHTML );
-	}
-	var output = document.getElementById('scene');
-	output.innerHTML = 'You have come to two tunnels, which way will you go?';
-	
-	var title = document.querySelectorAll('header > h1');
-	title[0].innerHTML = 'Cross Roads';
-	
-	var listOfItems = document.querySelector('#inventory > ul');
-	var item = document.createElement('li');
-	var string = document.createTextNode('lantern');
-	listOfItems.appendChild(item);
-	item.appendChild(string);
-	var items = document.createElement('li');
-	var rope = document.createTextNode('rope');
-	listOfItems.appendChild(items);
-	items.appendChild(rope);
-
-	var listOfItems = document.querySelector('#help > ul');
-	var action = document.createElement('li');
-	var jump = document.createTextNode('jump');
-	listOfItems.appendChild(action);
-	action.appendChild(jump);
-	var actions = document.createElement('li');
-        var run = document.createTextNode('run');
-        listOfItems.appendChild(actions);
-        actions.appendChild(run);
-
-	
+var prompt = require('readline-sync').question;
+console.log("The items are bread, rope, matches, and a lantern.");
+var player =["nothing","nothing","nothing","nothing"];
+var input = prompt("Choose action: pickup, drop or show");
+var pickup = function (){
+var inputpickup = prompt("what do you want to pickup?");
+        if(inputpickup === "drop" || inputpickup === "Drop"){
+        drop();
+        };
+        if(inputpickup === "show" || inputpickup ==="show") {
+        show();
+        };
+        if(inputpickup === "bread"||inputpickup === "Bread"){
+        player[0] = "Bread";
+        console.log("You picked up the Bread");
+        return;
+        };
+        if(inputpickup === "rope"||inputpickup ==="Rope"){
+        player[1] = "Rope";
+        console.log("You picked up the Rope");
+        };
+        if(inputpickup === "matches"|| inputpickup === "Matches"){
+        player[2] = "Matches";
+        console.log("You picked up the Matches");
+        };
+        if(inputpickup === "lantern" ||inputpickup === "Lantern"){
+        player[3] = "Lantern";
+        console.log("You picked up the Lantern");
+        };
+        return;
 };
-window.onload = runSomeTests;
-*/
+var drop = function(){
+var inputdrop = prompt("what do you want to drop?");
+        if(inputdrop === "bread"||inputdrop === " Bread"){
+        player[0] = "nothing";
+        console.log("You dropped the Bread");
+        };
+        if(inputdrop === "rope"||inputdrop === "Rope"){
+        player[1] = "nothing";
+        console.log("You dropped the Rope");
+        };
+        if(inputdrop === "matches"||inputdrop === "Matches"){
+        player[2] = "nothing";
+        console.log("You dropped the Matches");
+        };
+        if(inputdrop === "lantern"||inputdrop === "Lantern"){
+        player[3] = "nothing";
+	console.log("You dropped the Lantern");
+        };
+        return;
+};
+var show = function (){
+        for(var i = 0; i < 4; i++){
+        console.log(player[i].trim());
+        };
+        return;
+};
+var quit = function(){
+console.log("Thank you for using my program!");
+        return;
+};
+while(input !=="q") {
+if(input=== "pickup" || input=== "Pickup"){
+pickup();
+};
+if(input === "drop" || input=== "Drop"){
+drop();
+};
+if(input=== "show" || input==="show") {
+show();
+};
+if(input === 'q'){
+console.log('Thank you for using my program');
+}; 
+};
+

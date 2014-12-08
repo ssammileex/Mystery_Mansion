@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<!-- Samantha Errico
+	Introduction to Computer Programming-->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="author" content="Samantha Errico"/>
+	<script type="text/JavaScript" src="array.js"></script>
+	<script type="text/JavaScript" src="gameLogic.js"></script>
+	<script type="text/JavaScript" src="Nav.js"></script>
+	<script type="text/JavaScript" src="location.js"></script>
+<script>
+function Go(){
+	var userInput = document.getElementById("textInput").value;
+	if(userInput === "n" || userInput === "N"){
+		move(north);
+	}else if(userInput === "e" || userInput === "E"){
+		move(east);
+	}else if(userInput === "s" || userInput === "S"){
+		move(south);
+	}else if(userInput === "w" || userInput === "W"){
+		move(west);
+	}else if(userInput === "help" || userInput === "Help"){
+		help();
+	}else if(userInput === "take" || userInput === "Take"){
+		PlayerTakeJournal();
+		PlayerTakePhotograph();
+		PlayerTakeKeys();
+		PlayerTakeMatches();
+		PlayerTakeWood();
+	}else if(userInput === "i" || userInput "I"){
+		Inventory();
+	}else {
+		var message = "this is not a valid command"
+		updateText(message);
+	}
+
+	}
+}
+</script>
+<title> Mystery Mansion</title>
+<body onload="init();">
+	<h1> Samantha Errico<h1>
+	<h2> Introduction to Computer Programming</h2>
+	<h3 class="footer">Mystery Mansion</h3>
+<br>
+<textarea id="main" rows="16" cols="40"></textarea>
+<br>
+	<input type ="text" id="txtInput">
+	<input type ="button"
+		value = "Go"
+		onclick = "Go();">
+<br>

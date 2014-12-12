@@ -1,5 +1,5 @@
-var location = new array();
-var item = new array();
+var location = new Array();
+var item = new Array();
 
 function locales(_id, _name, _description, _item){
 	this.id = _id;

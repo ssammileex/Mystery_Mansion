@@ -60,55 +60,55 @@ var PlayerHasWood = false;
 	}
 	//starting location 
 	function Foyer(){
-		updateText(location[0].description);
+		updateText(locale[0].description);
 		currentLocation=0;
 	}
 
 	//west of foyer
 	function Kitchen(){
-		updateText(location[1].description);
+		updateText(locale[1].description);
 		currentLocation=1;
 	}
 
 	//north of foyer
 	function Dinning(){
-		updateText(location[2].description);
+		updateText(locale[2].description);
 		currentLocation=2;
 	}
 
 	//east of foyer
 	function Living(){
-		updateText(location[3].description);
+		updateText(locale[3].description);
 		currentLocation=3;
 	}
 
 	//north of dinning 
 	function Hallway(){
-		updateText(location[4].description);
+		updateText(locale[4].description);
 		currentLocation=4;
 	}
 
 	//north of Hallway
 	function Bedroom(){
-		updateText(location[5].description);
+		updateText(locale[5].description);
 		currentLocation=5;
 	}
 
 	//south of living 
 	function Basement(){
-		updateText(location[6].description);
+		updateText(locale[6].description);
 		currentLocation=6;
 	}
 
 	//south of foyer
 	function Courtyard(){
-		updateText(location[7].description);
+		updateText(locale[7].description);
 		currentLocation=7;
 	}
 
 	//west of Courtyard
 	function Shed(){
-		updateText(location[8].description);
+		updateText(locale[8].description);
 		currentLocation=8;
 	}
 	

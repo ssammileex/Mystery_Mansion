@@ -1,12 +1,12 @@
-var foyer = false;
-var kitchen = false;
-var dinning = false;
-var living = false;
-var hallway = false;
-var bedroom = false;
-var basement = false;
-var courtyard = false;
-var shed = false;
+var foyer = true;
+var kitchen = true;
+var dinning = true;
+var living = true;
+var hallway = true;
+var bedroom = true;
+var basement = true;
+var courtyard = true;
+var shed = true;
 
 var currentLocation = 0;
 var north = 0;
@@ -41,4 +41,3 @@ var nav = [ // n s e w
 		var message = "To move or go to the next room type N to go North, S to go South, E to go East, and W to go West. To leave the game type Quit.";
 		updateText(message);
 	}
-

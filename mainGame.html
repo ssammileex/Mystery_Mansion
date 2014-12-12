@@ -4,13 +4,11 @@
 	Introduction to Computer Programming
 	Samantha Errico-->
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-<meta name="author" content="Samantha Errico"/>
 <link href="game.css" rel="stylesheet" />
-	<script type="text/JavaScript" src="array.js"></script>
+    <script type="text/JavaScript" src="location.js"></script>
+    <script type="text/JavaScript" src="Nav.js"></script>
 	<script type="text/JavaScript" src="gameLogic.js"></script>
-	<script type="text/JavaScript" src="Nav.js"></script>
-	<script type="text/JavaScript" src="location.js"></script>
+	<script type="text/JavaScript" src="array.js"></script>
 <script>
 function btn_Go(){
 	var userInput = document.getElementById("textInput").value;
@@ -45,14 +43,15 @@ body{
 	color : #CC0033;
 }
 </style>
+</head>
 <title> Mystery Mansion</title>
-<body onload="init();">
+<body onload= "init();">
 	<h1> Mystery Mansion<h1>
 	<h2> Introduction to Computer Programming</h2>
 	<h3 class="footer">Samantha Errico</h3>
 
 <br>
-	<textarea id="main" rows="20" cols="70"></textarea>
+	<textarea id = "main" rows="20" cols="70"> </textarea>
 
 <br>
 	<label for="action"> Which direction do you want to go? </label>

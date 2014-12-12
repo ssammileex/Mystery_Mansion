@@ -30,16 +30,15 @@ var nav = [ // n s e w
 		var newLocation = nav[currentLocation][dir];
 		if(newLocation !== -1){
 			currentLocation = newLocation;
-		}
-	}else{
+		}else{
 		var msg = "You cannot go this way.";
 		updateText(msg);
-	}
+		}
 
 	} 
 
 	function help() {
-		var message = "help";
+		var message = "To move or go to the next room type N to go North, S to go South, E to go East, and W to go West. To leave the game type Quit.";
 		updateText(message);
 	}
 

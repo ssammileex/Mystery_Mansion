@@ -1,16 +1,18 @@
 <!doctype html>
 <html>
-<!-- Samantha Errico
-	Introduction to Computer Programming-->
+<!-- Mystery Mansion
+	Introduction to Computer Programming
+	Samantha Errico-->
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <meta name="author" content="Samantha Errico"/>
+<link href="game.css" rel="stylesheet" />
 	<script type="text/JavaScript" src="array.js"></script>
 	<script type="text/JavaScript" src="gameLogic.js"></script>
 	<script type="text/JavaScript" src="Nav.js"></script>
 	<script type="text/JavaScript" src="location.js"></script>
 <script>
-function Go(){
+function btn_Go(){
 	var userInput = document.getElementById("textInput").value;
 	if(userInput === "n" || userInput === "N"){
 		move(north);
@@ -28,26 +30,52 @@ function Go(){
 		PlayerTakeKeys();
 		PlayerTakeMatches();
 		PlayerTakeWood();
-	}else if(userInput === "i" || userInput "I"){
+	}else if(userInput === "i" || userInput === "I"){
 		Inventory();
 	}else {
-		var message = "this is not a valid command"
+		var message = "This is not a valid command"
 		updateText(message);
 	}
 
 	}
-}
 </script>
+<style>
+body{
+	background-color : #330033;
+	color : #CC0033;
+}
+</style>
 <title> Mystery Mansion</title>
 <body onload="init();">
-	<h1> Samantha Errico<h1>
+	<h1> Mystery Mansion<h1>
 	<h2> Introduction to Computer Programming</h2>
-	<h3 class="footer">Mystery Mansion</h3>
+	<h3 class="footer">Samantha Errico</h3>
+
 <br>
-<textarea id="main" rows="16" cols="40"></textarea>
+	<textarea id="main" rows="20" cols="70"></textarea>
+
 <br>
-	<input type ="text" id="txtInput">
+	<label for="action"> Which direction do you want to go? </label>
+<br>
+	<input type ="text" id="textInput" placeholder= "Enter an action here...">
 	<input type ="button"
 		value = "Go"
-		onclick = "Go();">
-<br>
+		onclick = "btn_Go();">
+
+    <aside id="inventory">
+        <h1> Inventory </h1>
+        <ul>
+        </ul>
+    </aside>
+
+    <aside id="help">
+        <h1> Available Actions </h1>
+        <ul>
+        </ul>
+    </aside>
+
+    <footer>
+        Copyright (c) 2014 Samantha Errico. All rights reserved.
+    </footer>
+    </body>
+    </html>

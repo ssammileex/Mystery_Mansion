@@ -1,4 +1,4 @@
-var location = new Array();
+var locale = new Array();
 var item = new Array();
 
 function locales(_id, _name, _description, _item){

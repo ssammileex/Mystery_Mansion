@@ -1,5 +1,5 @@
-function inti() {
-	location[0] = new locales("Location 0", "Foyer", "Everything is covered in dust, and has a musty smell. You decide to explore the house.", "none");
+function init() {
+	location[0] = new locales("Location 0", "Foyer", "Venturing through the woods is a weekly occurrence for you and your friends. You all have been best friends since you can remember. All four of you knew the the wood like the back of your hand. It is a cool, Autumn day, something out of the ordinary catches your attention. You squint your eyes really hard and can just make out the outline of a house. You turn to your friends and say, “That is weird. I think I see a house up ahead, I thought we knew every inch of these woods.” When you reach the front door the sign says, “DO NOT ENTER.” But, you fail to read it and push open the front door. Everything in the house is covered in dust, and has a musty smell. You decide to explore the rest of the house.", "none");
 	location[1] = new locales("Location 1", "Kitchen", "The kitchen looks as if no one ever used it. The table in the center of the room seems to be set for a dinner for two.", "none");
 	location[2] = new locales("Location 2", "Dinning Room", "The dinning room is extremely large. One wall is completely windows. On the left most wall there is a cabinet full of beautiful china. There seems to be something glowing from the cabinet, you can take it.", "Keys");
 	location[3] = new locales("Location 3", "Living Room", "There is a huge fireplace. The house is ice cold. Find matches and wood to start a fire.", "Matches");

@@ -4,12 +4,14 @@
 	Introduction to Computer Programming
 	Samantha Errico-->
 <head>
+
 <link href="game.css" rel="stylesheet" />
     <script type="text/JavaScript" src="location.js"></script>
     <script type="text/JavaScript" src="Nav.js"></script>
 	<script type="text/JavaScript" src="gameLogic.js"></script>
 	<script type="text/JavaScript" src="array.js"></script>
 <script>
+
 function btn_Go(){
 	var userInput = document.getElementById("textInput").value;
 	if(userInput === "n" || userInput === "N"){
@@ -27,9 +29,9 @@ function btn_Go(){
 		PlayerTakePhotograph();
 		PlayerTakeKeys();
 		PlayerTakeMatches();
-		PlayerTakeWood();
-	}else if(userInput === "i" || userInput === "I"){
 		Inventory();
+	}else if(userInput === "enter" || userInput === "Enter"){
+		enterShed();
 	}else {
 		var message = "This is not a valid command"
 		updateText(message);
@@ -39,8 +41,9 @@ function btn_Go(){
 </script>
 <style>
 body{
-	background-color : #330033;
-	color : #CC0033;
+	background-color : black;
+	color : red;
+
 }
 </style>
 </head>
@@ -49,6 +52,7 @@ body{
 	<h1> Mystery Mansion<h1>
 	<h2> Introduction to Computer Programming</h2>
 	<h3 class="footer">Samantha Errico</h3>
+	<h4 id="player" ></h4>
 
 <br>
 	<textarea id = "main" rows="20" cols="70"> </textarea>
@@ -60,19 +64,36 @@ body{
 	<input type ="button"
 		value = "Go"
 		onclick = "btn_Go();">
-
+	
     <aside id="inventory">
-        <h1> Inventory </h1>
+    	<h1>Inventory</h1>
+    	<ul id="inv1"></ul>
+    	<ul id="inv2"></ul>
+    	<ul id="inv3"></ul>
+    	<ul id="inv4"></ul>
+    	<ul></ul>
+    	
+    	<input type ="text" id="dropInput" placeholder= "Enter an item to drop...">
+    	<input type ="button"
+		value = "Go"
+		onclick = "drop();">
         <ul>
         </ul>
     </aside>
 
     <aside id="help">
-        <h1> Available Actions </h1>
-        <ul>
-        </ul>
+        <h1>Possible Actions </h1>
+        <ul>n - North</ul>
+        <ul>e - East</ul>
+        <ul>s - South</ul>
+        <ul>w - West</ul>
+        <ul>take - items are location sensitive</ul>
+        <ul>drop type name of item</ul>
+        <ul> help </ul>
+        <ul> enter - enter shed </ul>
+        <ul></ul>
     </aside>
-
+   <a href="GameMap2.htm"><img src="map.jpeg"></a> 
     <footer>
         Copyright (c) 2014 Samantha Errico. All rights reserved.
     </footer>

@@ -2,7 +2,7 @@ var PlayerHasJournal = false;
 var PlayerHasPhotograph = false;
 var PlayerHasKeys = false;
 var PlayerHasMatches = false;
-var PlayerHasWood = false;
+
 
 	function PlayerTakeJournal(){
 		if(currentLocation === 5 && PlayerHasJournal === false){
@@ -19,7 +19,7 @@ var PlayerHasWood = false;
 			PlayerHasPhotograph = true;
 			updateText(item[1].notTaken);
 
-		}else if(currentLocation === 5 && PlayerHasPhotograph === true){
+		}else if(currentLocation === 4 && PlayerHasPhotograph === true){
 			updateText(item[1].taken);
 		}
 	}
@@ -44,16 +44,52 @@ var PlayerHasWood = false;
 		}
 	}
 
-	function PlayerTakeWood(){
-		if(currentLocation === 4 && PlayerHasWood === false){
-			PlayerHasWood = true;
-			updateText(item[4].notTaken);
-
-		}else if(currentLocation === 5 && PlayerHasWood === true){
-			updateText(item[4].taken);
+	function Inventory() {
+		if(PlayerHasJournal === true){
+			document.getElementById("inv1").innerHTML="\n"+(item[0].name);
+		}if(PlayerHasPhotograph === true){
+			document.getElementById("inv2").innerHTML="\n"+(item[1].name);
+		}if(PlayerHasKeys === true){
+			document.getElementById("inv3").innerHTML="\n"+(item[2].name);
+		}if(PlayerHasMatches === true){
+			document.getElementById("inv4").innerHTML="\n"+(item[3].name);
 		}
 	}
-
+	function drop() {
+		var dropInput = document.getElementById("dropInput").value;
+		if(PlayerHasJournal === true && dropInput==="Journal"){
+			document.getElementById("inv1").innerHTML="";
+			PlayerHasJournal=false;
+		}if(PlayerHasPhotograph === true && dropInput==="Photograph"){
+			document.getElementById("inv2").innerHTML="";
+			PlayerHasPhotograph= false;
+		}if(PlayerHasKeys === true && dropInput==="Keys"){
+			document.getElementById("inv3").innerHTML="";
+			PlayerHasKeys = false;
+		}if(PlayerHasMatches === true && dropInput==="Matches"){
+			document.getElementById("inv4").innerHTML="";
+			PlayerHasMatches = false;
+		}
+	}
+	function enterShed() {
+		if(PlayerHasJournal === true && PlayerHasPhotograph === true && PlayerHasKeys === true && PlayerHasMatches === true && currentLocation === 8){
+	
+		winGame();	
+		}else{
+			updateText("You need to find all the items to enter.");
+				
+		}
+	}
+	function winGame() {
+		var winNum = prompt("The ghost will not let you enter the shed until you guess the right number between 1 and 2. What is the ghost's number?");
+		var win = Math.floor((Math.random() * 2) +1);
+		var numWin = parseInt(winNum);
+		if(win === numWin) {
+			updateText("You have guessed the correct number! The ghost allows you to enter the shed. You reunited the husband and wife ghost after centuries of being apart. The two ghosts both agree to leave the house for good allowing people to refurbish it and finally live inside knowing it is no longer haunted. Congratulations on winning the game. Thank you for playing.");
+		}else{
+			updateText("This is the wrong number. Type Enter to try again.");
+		}
+	}
 	function updateText(msg){
 		var text = document.getElementById("main");
 		text.value=msg+"\n"+"\n"+text.value;
@@ -111,4 +147,4 @@ var PlayerHasWood = false;
 		updateText(locale[8].description);
 		currentLocation=8;
 	}
-	
+

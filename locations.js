@@ -147,4 +147,3 @@ var PlayerHasMatches = false;
 		updateText(locale[8].description);
 		currentLocation=8;
 	}
-

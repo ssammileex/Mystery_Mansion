@@ -1,4 +1,3 @@
-
 html {
     font-family: cursive;
     text-align: center;
@@ -52,7 +51,7 @@ output {
 }
 
 output, input {
-    font-size: 250%;
+    font-size: 100%;
     font-family: cursive;
 }
 
@@ -65,4 +64,3 @@ main > section {
 footer {
     top: 90%;
 }
-

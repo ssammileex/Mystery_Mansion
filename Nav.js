@@ -1,12 +1,12 @@
-var foyer = true;
-var kitchen = true;
-var dinning = true;
-var living = true;
-var hallway = true;
-var bedroom = true;
-var basement = true;
-var courtyard = true;
-var shed = true;
+var foyer = false;
+var kitchen = false;
+var dinning = false;
+var living = false;
+var hallway = false;
+var bedroom = false;
+var basement = false;
+var courtyard = false;
+var shed = false;
 
 var currentLocation = 0;
 var north = 0;
@@ -30,6 +30,7 @@ var nav = [ // n s e w
 		var newLocation = nav[currentLocation][dir];
 		if(newLocation !== -1){
 			currentLocation = newLocation;
+			updateLocation();
 		}else{
 		var msg = "You cannot go this way.";
 		updateText(msg);
@@ -38,6 +39,31 @@ var nav = [ // n s e w
 	} 
 
 	function help() {
-		var message = "To move or go to the next room type N to go North, S to go South, E to go East, and W to go West. To leave the game type Quit.";
+		var message = "To move or go to the next room type N to go North, S to go South, E to go East, and W to go West. If you want to see how the rooms connect, press the question mark next to the go button to look at a map.";
 		updateText(message);
+	}
+
+	function updateLocation() {
+		switch(currentLocation)
+		{
+			case 0: Foyer();
+			break;
+			case 1: Kitchen();
+			break;
+			case 2: Dinning();
+			break;
+			case 3: Living();
+			break;
+			case 4: Hallway();
+			break;
+			case 5: Bedroom();
+			break;
+			case 6: Basement();
+			break;
+			case 7: Courtyard();
+			break;
+			case 8: Shed();
+			break;
+		
+		}
 	}
